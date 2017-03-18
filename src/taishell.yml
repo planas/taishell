@@ -1,0 +1,29 @@
+TaiShell:
+  attributes: 0
+  version:
+    major: 1
+    minor: 1
+  main:
+    start: module_start
+    stop: module_stop
+  modules:
+    TaiShell:
+      syscall: true
+      functions:
+        - tshLog
+        - tshIsShell
+        - tshMemAlloc
+        - tshMemFree
+        - tshSetButtonIntercept
+        - tshSetPluginState
+        - tshGetNumPlugins
+        - tshGetPluginList
+        - tshGetPlugin
+        - tshEnableAutoSuspend
+        - tshDisableAutoSuspend
+    TaiShellForKernel:
+      functions:
+        - ktshLog
+        - ktshMemAlloc
+        - ktshMemFree
+
